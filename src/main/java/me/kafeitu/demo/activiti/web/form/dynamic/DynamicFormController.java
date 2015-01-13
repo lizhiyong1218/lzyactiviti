@@ -203,6 +203,9 @@ public class DynamicFormController {
         try {
             identityService.setAuthenticatedUserId(user.getId());
             formService.submitTaskFormData(taskId, formProperties);
+//            Map<String, Object> variables=new HashMap<String, Object>();
+//            variables.put("deptLeaderPass", true);//部门领导审批需要的参数
+//			taskService.complete(taskId, variables);//用taskservice比用formservice灵活性要高
         } finally {
             identityService.setAuthenticatedUserId(null);
         }

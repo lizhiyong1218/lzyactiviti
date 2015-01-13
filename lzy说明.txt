@@ -1,0 +1,12 @@
+1.用eclipse git将工程下到eclipse中
+2.将工程从eclipse中软删除
+3.将工程引入eclipse
+4.在cmd控制台，进入项目根路径执行
+	初始化（重建数据库）请使用下面的命令：
+	mvn antrun:run -Prefresh-db
+	仅插入用户角色信息请使用下面的命令：
+	mvn antrun:run -Pinitdatas
+5.将pom文件中的mysql注释打开，h2注释掉
+6.启动工程自动创建表
+7.运行data.sql插入初始数据
+	
